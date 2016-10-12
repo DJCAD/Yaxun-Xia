@@ -1,0 +1,4 @@
+This system is about a digital kattle which will indicate whether the temperature is suitable for people drinking.
+-When the temperature is too low, the kattle will heat the water automatically. 
+-If the water is too hot, the light on the kattle will be red.
+-If the temperature of water is suitable for drinking, the light will turn to green.
