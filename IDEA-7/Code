@@ -1,0 +1,26 @@
+
+int tempPin = 0;     // the thermistor and 4,7k resistor
+int temp;     // the analog reading from the sensor divider
+int LEDCool = 11;          // connect Blue LED to pin 10 
+int LEDHot = 10;          // connect Red LED to pin 9 
+int breakPoint = 940;
+void setup(void) {
+  Serial.begin(9600);
+}
+
+void loop(void) {
+  temp = analogRead(tempPin);  
+
+  Serial.print("Temp = ");
+  Serial.println(temp);     // reading the values
+
+ if (temp <= breakPoint){ //is cool or hot?
+   digitalWrite (LEDCool, HIGH);
+   digitalWrite (LEDHot, LOW);
+ }
+ else{
+   digitalWrite (LEDHot, HIGH);
+   digitalWrite (LEDCool, LOW);
+  delay(10);
+}
+}
